@@ -12,7 +12,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let eggTimes : [String: Int] = ["Soft": 300, "Medium": 420, "Hard": 720]
+    let eggTimes : [String: Int] = ["Soft": 3, "Medium": 5, "Hard": 7]
     
     var secondsRemaining = 60
     
@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         secondsRemaining = eggTimes[hardness!]!
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(theMethod), userInfo: nil, repeats: true)
-        
     }
     
     @objc func theMethod() {
